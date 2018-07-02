@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "PizzaStore.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/PizzaStore.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PizzaStore.Library.dll": {}
+        }
       }
     }
   },
@@ -673,11 +683,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "PizzaStore.Library/1.0.0": {
+      "type": "project",
+      "path": "../PizzaStore.Library/PizzaStore.Library.csproj",
+      "msbuildProject": "../PizzaStore.Library/PizzaStore.Library.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "PizzaStore.Library >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -687,11 +703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
+      "projectUniqueName": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
       "projectName": "PizzaStore",
-      "projectPath": "C:\\Revature\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
+      "projectPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\PizzaStore.csproj",
       "packagesPath": "C:\\Users\\Kyle\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\PizzaStore\\PizzaStore\\obj\\",
+      "outputPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -709,7 +725,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj": {
+              "projectPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

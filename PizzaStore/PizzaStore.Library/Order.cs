@@ -9,6 +9,7 @@ namespace PizzaStore.Library
         public Location Location { get; set; }
         public EndUser User { get; set; }
         public DateTime OrderTime { get; set; }
+        public Pizza Pizza { get; set; }
 
     }
 }

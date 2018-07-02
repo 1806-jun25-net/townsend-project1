@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj",
+      "projectUniqueName": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj",
       "projectName": "PizzaStore.Library",
-      "projectPath": "C:\\Revature\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj",
+      "projectPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Library\\PizzaStore.Library.csproj",
       "packagesPath": "C:\\Users\\Kyle\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\PizzaStore\\PizzaStore.Library\\obj\\",
+      "outputPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
