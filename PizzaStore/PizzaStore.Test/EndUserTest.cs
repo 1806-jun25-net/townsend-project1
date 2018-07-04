@@ -1,14 +1,15 @@
+using PizzaStore.Library;
 using System;
 using Xunit;
 
 namespace PizzaStore.Test
 {
-    public class UnitTest1
+    public class EndUserTest
     {
         [Fact]
         public void Test1()
         {
-
+            EndUser  a = new EndUser
         }
     }
 }
