@@ -1,0 +1,11 @@
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\bin\Debug\netcoreapp2.1\PizzaStore.Data.deps.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\bin\Debug\netcoreapp2.1\PizzaStore.Data.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.csproj.CoreCompileInputs.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.AssemblyInfoInputs.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.AssemblyInfo.cs
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\bin\Debug\netcoreapp2.1\PizzaStore.Data.runtimeconfig.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\bin\Debug\netcoreapp2.1\PizzaStore.Data.runtimeconfig.dev.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.csprojAssemblyReference.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\bin\Debug\netcoreapp2.1\PizzaStore.Data.pdb
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Data\obj\Debug\netcoreapp2.1\PizzaStore.Data.pdb

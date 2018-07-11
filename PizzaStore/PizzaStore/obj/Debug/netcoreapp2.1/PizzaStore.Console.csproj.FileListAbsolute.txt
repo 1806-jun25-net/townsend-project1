@@ -1,0 +1,17 @@
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Console.deps.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Console.runtimeconfig.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Console.runtimeconfig.dev.json
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Console.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Console.pdb
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Library.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Library.pdb
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.csprojAssemblyReference.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.csproj.CoreCompileInputs.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.AssemblyInfoInputs.cache
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.AssemblyInfo.cs
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.csproj.CopyComplete
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\obj\Debug\netcoreapp2.1\PizzaStore.Console.pdb
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Data.dll
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\PizzaStore.Data.pdb
+C:\Revature\townsend-project1\PizzaStore\PizzaStore\bin\Debug\netcoreapp2.1\appsettings.json

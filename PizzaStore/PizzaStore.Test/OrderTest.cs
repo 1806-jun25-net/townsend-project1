@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PizzaStore.Library;
+using System;
+using Xunit;
 
 namespace PizzaStore.Test
 {
-    class Class1
+    public class OrderTest
     {
+        [Fact]
+        public void SmallChickenPizzaTest()
+        {
+            
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace PizzaStore.Test
         [Fact]
         public void Test1()
         {
-            EndUser  a = new EndUser
+            
         }
     }
 }
