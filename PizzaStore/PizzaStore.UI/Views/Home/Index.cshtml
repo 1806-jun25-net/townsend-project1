@@ -6,8 +6,8 @@
 @using (Html.BeginForm("Login", "Users", FormMethod.Post))
 {
 
-    <p>First Name: </p> @Html.TextBoxFor(model => model.FirstName)
-    <p>Last Name: </p>@Html.TextBoxFor(model => model.LastName)
+    <p>First Name: </p> @Html.TextBoxFor(model => model.FirstName, new {required = "required" })
+    <p>Last Name: </p>@Html.TextBoxFor(model => model.LastName, new { required = "required" })
     <br />
     <input type ="submit" value="Login" />
 

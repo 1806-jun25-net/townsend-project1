@@ -22,8 +22,7 @@ namespace PizzaStore.UI.Controllers
             var orderList = Repo.GetOrders();
 
             Lib.EndUser user = Repo.GetUserById(Repo.GetUserID(model.FirstName, model.LastName));
-            Repo.UpdateUser(user);
-            Repo.Save();
+            
             Lib.Order order = new Lib.Order();
             order.UserID = Repo.GetUserID(model.FirstName, model.LastName);
             order.StoreID = model.StoreLocation;
