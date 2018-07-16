@@ -27,6 +27,5 @@ namespace PizzaStore.Data
 
         public ICollection<Orders> Orders { get; set; }
         public ICollection<Users> Users { get; set; }
-
     }
 }

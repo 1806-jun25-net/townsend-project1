@@ -1,4 +1,3 @@
-C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.csprojAssemblyReference.cache
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.csproj.CoreCompileInputs.cache
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.AssemblyInfoInputs.cache
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\bin\Debug\netcoreapp2.1\PizzaStore.Data.dll
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\bin\Debug\netcoreapp2.1\PizzaStore.Data.pdb
 C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.csproj.CopyComplete
+C:\Revature\townsend-project1\PizzaStore\PizzaStore.Library\obj\Debug\netcoreapp2.1\PizzaStore.Library.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 using PizzaStore.Library.PizzaClassRepo;
@@ -13,118 +14,47 @@ namespace PizzaStore.Library
         public string Crust { get; set; }
         public string Size { get; set; }
         public decimal Price { get; set; }
-       
-        public List<Topping> Toppings { get; set; } = new List<Topping>();
+        public bool Bacon { get; set; }
+        public bool Pepperoni { get; set; }
+        public bool Sausage { get; set; }
+        public bool Chicken { get; set; }
+        public bool Onions { get; set; }
+        public bool Olives { get; set; }
 
 
-        public void ChooseCrust()
+        public decimal CalculatePrice(Pizza pizza)
         {
-            
-            string crust = "";
-            do
-            {
-                Console.WriteLine("What type of crust would you like?");
-                Console.WriteLine("Options are Thin, Stuffed and Pan");
-                crust = Console.ReadLine();
-            } while (crust != "Pan" && crust != "Thin" && crust != "Stuffed");
-            switch (crust)
-            {
-                case "Pan":
-                    Price += (decimal)1.0;
-                    break;
-                case "Thin":
-                    Price += (decimal)0.50;
-                    break;
-                case "Stuffed":
-                    Price += (decimal)1.30;
-                    break;
-            }
-            Crust = crust;
-        }
-        public void ChooseSauce()
-        {
-            string sauce = "";
-            do
-            {
-                Console.WriteLine("What type of sauce would you like?");
-                Console.WriteLine("Options are Buffalo, Barbeque and Marinara");
-                sauce = Console.ReadLine();
-            } while (sauce != "Buffalo" && sauce != "Barbeque" && sauce != "Marinara");
+            decimal temp = 0;
+            if (pizza.Bacon)
+                temp += (decimal)1.00;
+            if (pizza.Pepperoni)
+                temp += (decimal)1.00;
+            if (pizza.Sausage)
+                temp += (decimal)1.00;
+            if (pizza.Chicken)
+                temp += (decimal)1.00;
+            if (pizza.Size == "Large")
+                temp += 10;
+            else if (pizza.Size == "Medium")
+                temp += 8;
+            else if (pizza.Size == "Small")
+                temp += 6;
+            if (pizza.Crust == "Thin")
+                temp += (decimal)0.60;
+            else if (pizza.Crust == "Pan")
+                temp += 1;
+            else if (pizza.Crust == "Stuffed")
+                temp += (decimal)1.20;
 
-            Sauce = sauce;
-        }
-        public void ChooseSize()
-        {
-            string size = "";
-            do
-            {
-                Console.WriteLine("What size would you like?(L/M/S)");
-                size = Console.ReadLine();
-            } while (size != "L" && size != "M" && size != "S");
 
-             switch(size)
-             {
-                case "L":
-                    Price += (decimal)10.0;
-                    size = "Large";
-                    break;
-                case "M":
-                    Price += (decimal)8.0;
-                    size = "Medium";
-                    break;
-                case "S":
-                    Price += (decimal)6.0;
-                    size = "Small";
-                    break;
-             }
-            Size = size;
-        }
-        public Topping AddTopping(string topping, int id, int toppingId)
-        {
-            string[] meats = { "Bacon", "Pepperoni", "Sausage", "Chicken" };
-            foreach (string s in meats)
-            {
-
-                if (topping == s)
-                    Price += (decimal)1.20;
-            }
-            Topping temp = new Topping();
-            temp.Name = topping;
-            temp.PizzaID = id;
-            temp.ToppingID = toppingId;
-            Toppings.Add(temp);
             return temp;
-
-
-        }
-        public void ChooseToppings(int id, PizzaStoreRepo repo)
-        {
-            string[] toppings = { "Bacon", "Pepperoni", "Sausage", "Chicken", "Olives", "Onions" };
-            foreach (string s in toppings)
-            {
-                Console.WriteLine($"Would you like {s} on your pizza?(y/n)");
-                string ans = Console.ReadLine();
-               /* if (ans == "y")
-                {
-                    repo.AddTopping(AddTopping(s, id, repo.SetToppingId()));
-                    repo.Save();
-                }*/
-                    
-            }
- 
-            
-            
         }
         
-        public override string ToString()
-        {
-            string str = $"{Size} pizza with ";
-            foreach(Topping s in Toppings)
-            {
-                str = str + s.Name + ", ";
-            }
-            str = $"{str} {Sauce} sauce and {Crust} crust.  Price: ${Price}";
-            return str;
-        }
+
+        
+        
+        
+        
+        
     }
 }

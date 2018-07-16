@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 using PizzaStore.Data;
@@ -14,22 +15,8 @@ namespace PizzaStore.Library.PizzaClassRepo
         {
             pizzaDB = db ?? throw new ArgumentNullException(nameof(db));
         }
-        public string DisplayOrderHistory()
-        {
-            var orders = new List<Order>();
-            orders = GetOrders();
-            string str = "OrderID  |  UserID |  StoreID  |  OrderTime  |  Price\n\n";
-            foreach(Order order in orders)
-            {
-                str = $"{str}{order.OrderID}  |  {order.UserID}  |  {order.StoreID}  |  {order.OrderTime}  |  {order.Price}\n\n";
-            }
-            return str;
-        }
-        public int SetUserID()
-        {
-            var users = Mapper.Map(pizzaDB.Users);
-            return users.Count + 1;
-        }
+        
+        
         public void AddUser(EndUser user)
         {
             pizzaDB.Add(Mapper.Map(user));
@@ -52,77 +39,67 @@ namespace PizzaStore.Library.PizzaClassRepo
 
             return returnUser;
         }
-        public int SetPizzaId()
+        
+        
+        public int GetUserID(string first, string last)
         {
-            var pizzas = Mapper.Map(pizzaDB.Pizzas);
-
-            return pizzas.Count + 1;
-        }
-        public void AddPizza(Pizza pizza)
-        {
-            pizzaDB.Add(Mapper.Map(pizza));
-        }
-        public int SetToppingId()
-        {
-            var toppings = Mapper.Map(pizzaDB.Toppings);
-            return toppings.Count + 1;
-        }
-        public void AddPizzas(List<Pizza> pizzas)
-        {
-            foreach(var pizza in pizzas)
+            var userList = pizzaDB.Users;
+            foreach(var user in userList)
             {
-                pizzaDB.Add(Mapper.Map(pizza));
+                if (first == user.FirstName && last == user.LastName)
+                    return user.UserId;
             }
-        }
-        public void AddTopping(Topping topping)
-        {
-            
-            
-                pizzaDB.Add(Mapper.Map(topping));
-            
+            return 0;
         }
         public void Save()
         {
             pizzaDB.SaveChanges();
         }
-
-        public List<Order> GetOrders()
+        public void AddPizza(Pizza pizza)
         {
-            var orderList = Mapper.Map(pizzaDB.Orders.Include(x => x.Store).Include(y => y.User));
-            foreach (var order in orderList)
+            pizzaDB.Add(Mapper.Map(pizza));
+        }
+        public IEnumerable<EndUser> GetUsers(string search = null)
+        {
+            if (search == null)
             {
-                order.Pizzas = FindPizzasByOrderId(order.OrderID);
+                // disable pointless tracking for performance
+                return Mapper.Map(pizzaDB.Users);
             }
-            return orderList;
-
-        }
-
-        public int GetUserId(string first, string last)
-        {
-            var users = pizzaDB.Users;
-            foreach(var user in users)
+            else
             {
-                if (user.FirstName == first && user.LastName == last)
-                    return user.UserId;
+                return Mapper.Map(pizzaDB.Users);
             }
-            return 0;
+
         }
 
-        public List<Pizza> FindPizzasByOrderId(int orderId)
+        public int GetOrderID(int UserID)
         {
-            List<Pizza> pizzas = new List<Pizza>();
-            foreach(var pizza in pizzaDB.Pizzas)
+            var orderList = pizzaDB.Orders;
+            int temp = 0;
+            foreach(var item in orderList)
             {
-                if (orderId == pizza.OrderId)
-                    pizzas.Add(Mapper.Map(pizza));
+                if (item.UserId == UserID)
+                    temp = item.OrderId;
             }
-            return pizzas;
+            return temp;
         }
-
-        public void DecreaseInventory(int location)
+        public IEnumerable<Order> GetOrders(string search = null)
         {
-
+            if (search == null)
+            {
+                // disable pointless tracking for performance
+                return Mapper.Map(pizzaDB.Orders);
+            }
+            else
+            {
+                return Mapper.Map(pizzaDB.Orders);
+            }
         }
+
+
+
+
 
     }
 }

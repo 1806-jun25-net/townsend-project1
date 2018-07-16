@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PizzaStore.UI.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<form asp-action="Index" method="get">
+    Search: <input type="search" name="search" />
+    <button type="submit">Submit</button>
+</form>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.UserID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StoreID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OrderID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@Html.ActionLink("Users","Index","Users")
+@Html.ActionLink("Orders","Index","Orders")
+@Html.ActionLink("Orders","PlaceOrder","Orders")
+
+@model PizzaStore.UI.Models.OrderDisplay
+
+
+@using (Html.BeginForm("Login", "Users", FormMethod.Post))
+{
+
+    <p>First Name: </p> @Html.TextBoxFor(model => model.FirstName)
+    <p>Last Name: </p>@Html.TextBoxFor(model => model.LastName)
+    <input type ="submit" value="Login" />
+
+}

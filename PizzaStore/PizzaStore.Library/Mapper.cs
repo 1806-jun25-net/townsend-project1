@@ -44,7 +44,7 @@ namespace PizzaStore.Library
         };
         public static Data.Locations Map(Location location) => new Data.Locations
         {
-            //StoreId = location.StoreID,
+            StoreId = location.StoreID,
             Pepperoni = location.Pepperoni,
             Sausage = location.Sausage,
             Chicken = location.Chicken,
@@ -62,50 +62,56 @@ namespace PizzaStore.Library
         public static Order Map(Data.Orders order) => new Order
         {
             OrderID = order.OrderId,
+            UserID = order.UserId,
             OrderTime = order.OrderTime,
             Price = order.Price,
-            UserID = order.UserId,
             StoreID = order.StoreId
         };
 
         public static Data.Orders Map(Order order) => new Data.Orders
         {
-            OrderTime = order.OrderTime,
-            Price = order.Price,
+            OrderId = order.OrderID,
             UserId = order.UserID,
-            StoreId = order.StoreID
+            StoreId = order.StoreID,
+            OrderTime = order.OrderTime,
+            Price = order.Price
+            
         };
         public static Pizza Map(Data.Pizzas pizza) => new Pizza
         {
             PizzaID = pizza.PizzaId,
+            OrderID = pizza.OrderId,
             Sauce = pizza.Sauce,
             Crust = pizza.Crust,
             Size = pizza.Size,
             Price = pizza.Price,
-            OrderID = pizza.OrderId
+            Pepperoni = pizza.Pepperoni,
+            Bacon= pizza.Bacon,
+            Chicken = pizza.Chicken,
+            Sausage =pizza.Sausage,
+            Onions = pizza.Onions,
+            Olives = pizza.Olives
+            
         };
 
         public static Data.Pizzas Map(Pizza pizza) => new Data.Pizzas
         {
+            OrderId = pizza.OrderID,
             Sauce = pizza.Sauce,
             Crust = pizza.Crust,
             Size = pizza.Size,
             Price = pizza.Price,
-            OrderId = pizza.OrderID
+            Pepperoni = pizza.Pepperoni,
+            Bacon = pizza.Bacon,
+            Chicken = pizza.Chicken,
+            Sausage = pizza.Sausage,
+            Onions = pizza.Onions,
+            Olives = pizza.Olives
+
+
         };
 
-        public static Topping Map(Data.Toppings topping) => new Topping
-        {
-            Name = topping.Name,
-            PizzaID = topping.PizzaId,
-        };
-
-        public static Data.Toppings Map(Topping topping) => new Data.Toppings
-        {
-            Name = topping.Name,
-            PizzaId = topping.PizzaID
-        };
-
+   
 
         
         public static List<EndUser> Map(IEnumerable<Data.Users> users) => users.Select(Map).ToList();
@@ -120,7 +126,6 @@ namespace PizzaStore.Library
         public static List<Pizza> Map(IEnumerable<Data.Pizzas> pizzas) => pizzas.Select(Map).ToList();
         public static List<Data.Pizzas> Map(IEnumerable<Pizza> pizzas) => pizzas.Select(Map).ToList();
 
-        public static List<Topping> Map(IEnumerable<Data.Toppings> toppings) => toppings.Select(Map).ToList();
-        public static List<Data.Toppings> Map(IEnumerable<Topping> toppings) => toppings.Select(Map).ToList();
+       
     }
 }

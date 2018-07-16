@@ -6916,7 +6916,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kyle\\.nuget\\packages\\": {},
+    "C:\\Users\\KyleT\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -6925,14 +6925,14 @@
       "projectUniqueName": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Test\\PizzaStore.Test.csproj",
       "projectName": "PizzaStore.Test",
       "projectPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Test\\PizzaStore.Test.csproj",
-      "packagesPath": "C:\\Users\\Kyle\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\KyleT\\.nuget\\packages\\",
       "outputPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KyleT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

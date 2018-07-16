@@ -538,6 +538,21 @@
           "lib/netstandard2.0/NLog.dll": {}
         }
       },
+      "NUnit/3.10.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1975,6 +1990,38 @@
         "lib/xamarinios10/NLog.xml",
         "nlog.4.5.6.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "NUnit/3.10.1": {
+      "sha512": "E3ii6+VLdeIxTQ5gPjk/7g/xl+aCifbfcIkiGayZCuos+22FEdtKGrxMe6SzoXCQCcL7gdqhfNIFTaZ1+dS18g==",
+      "type": "package",
+      "path": "nunit/3.10.1",
+      "files": [
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.pdb",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.pdb",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.pdb",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.pdb",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.pdb",
+        "lib/netstandard1.6/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.pdb",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.10.1.nupkg.sha512",
+        "nunit.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -3785,12 +3832,13 @@
       "Microsoft.Extensions.Configuration.Json >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "NLog >= 4.5.6",
+      "NUnit >= 3.10.1",
       "PizzaStore.Data >= 1.0.0",
       "PizzaStore.Library >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kyle\\.nuget\\packages\\": {},
+    "C:\\Users\\KyleT\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3799,14 +3847,14 @@
       "projectUniqueName": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\PizzaStore.Console.csproj",
       "projectName": "PizzaStore.Console",
       "projectPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\PizzaStore.Console.csproj",
-      "packagesPath": "C:\\Users\\Kyle\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\KyleT\\.nuget\\packages\\",
       "outputPath": "C:\\Revature\\townsend-project1\\PizzaStore\\PizzaStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KyleT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3865,6 +3913,10 @@
           "NLog": {
             "target": "Package",
             "version": "[4.5.6, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.10.1, )"
           }
         },
         "imports": [
