@@ -25,7 +25,7 @@ namespace PizzaStore.UI.Models
         public string LastName { get; set; }
         public int StoreLocation { get; set; } = 1;
         public int OrderPref { get; set; }
-
+        public DateTime OrderTime;
         public int PizzaCount { get; set; }
     }
 }

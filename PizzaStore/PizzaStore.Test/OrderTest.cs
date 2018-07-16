@@ -7,7 +7,7 @@ namespace PizzaStore.Test
     public class OrderTest
     {
         [Fact]
-        public void SmallChickenPizzaTest()
+        public void InsertOrder()
         {
             
         }

@@ -5,6 +5,8 @@ using System.Text;
 using PizzaStore.Data;
 using PizzaStore.Library;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
 namespace PizzaStore.Library.PizzaClassRepo
 {
     public class PizzaStoreRepo
@@ -16,6 +18,26 @@ namespace PizzaStore.Library.PizzaClassRepo
             pizzaDB = db ?? throw new ArgumentNullException(nameof(db));
         }
         
+        public IEnumerable<Order> GetOldest()
+        {
+            var orders = pizzaDB.Orders;
+            return Mapper.Map(orders.OrderBy(x => x.OrderTime));
+        }
+        public IEnumerable<Order> GetNewest()
+        {
+            var orders = pizzaDB.Orders;
+            return Mapper.Map(orders.OrderByDescending(x => x.OrderTime));
+        }
+        public IEnumerable<Order> GetCheap()
+        {
+            var orders = pizzaDB.Orders;
+            return Mapper.Map(orders.OrderBy(x => x.Price));
+        }
+        public IEnumerable<Order> GetExpensive()
+        {
+            var orders = pizzaDB.Orders;
+            return Mapper.Map(orders.OrderByDescending(x => x.Price));
+        }
         
         public void AddUser(EndUser user)
         {
@@ -26,7 +48,10 @@ namespace PizzaStore.Library.PizzaClassRepo
         {
             pizzaDB.Add(Mapper.Map(order));
         }
-
+        public void UpdateUser(EndUser user)
+        {
+            pizzaDB.Entry(pizzaDB.Users.Find(user.UserID)).CurrentValues.SetValues(Mapper.Map(user));
+        }
         public EndUser GetUserById(int id)
         {
             var users = pizzaDB.Users;
@@ -59,20 +84,44 @@ namespace PizzaStore.Library.PizzaClassRepo
         {
             pizzaDB.Add(Mapper.Map(pizza));
         }
-        public IEnumerable<EndUser> GetUsers(string search = null)
+        public List<Library.EndUser> GetUsers(string search = null)
         {
+            var users = pizzaDB.Users;
+            List<EndUser> result = new List<EndUser>();
             if (search == null)
             {
-                // disable pointless tracking for performance
-                return Mapper.Map(pizzaDB.Users);
+                foreach (var item in users)
+                {
+                    result.Add(Mapper.Map(item));
+                }
             }
             else
             {
-                return Mapper.Map(pizzaDB.Users);
+                foreach (var item in users)
+                {
+                    if (item.FirstName.Contains(search) || item.LastName.Contains(search))
+                    {
+                        result.Add(Mapper.Map(item));
+                    }
+                }
             }
-
+            return result;
         }
 
+        public void UpdateLocation(Location store)
+        {
+            pizzaDB.Entry(pizzaDB.Locations.Find(store.StoreID)).CurrentValues.SetValues(Mapper.Map(store));
+        }
+        public Location GetStoreByID(int id)
+        {
+            var stores = pizzaDB.Locations;
+            foreach(var store in stores)
+            {
+                if (store.StoreId == id)
+                    return Mapper.Map(store);
+            }
+            return new Location();
+        }
         public int GetOrderID(int UserID)
         {
             var orderList = pizzaDB.Orders;
@@ -83,6 +132,38 @@ namespace PizzaStore.Library.PizzaClassRepo
                     temp = item.OrderId;
             }
             return temp;
+        }
+        public List<Order> GetOrdersByUserID(int i)
+        {
+            var orders = pizzaDB.Orders;
+            List<Order> result = new List<Order>();
+            foreach (var item in orders)
+            {
+                if (item.UserId == i)
+                {
+                    result.Add(Mapper.Map(item));
+                }
+            }
+            return result;
+        }
+
+        public List<Location> GetLocations()
+        {
+            var locations = pizzaDB.Locations;
+            return Mapper.Map(locations);
+        }
+       
+        public List<Order> GetOrdersByStoreID(int id)
+        {
+            var orders = pizzaDB.Orders;
+            var result = new List<Order>();
+            foreach(var item in orders)
+            {
+                if (item.StoreId == id)
+                    result.Add(Mapper.Map(item));
+
+            }
+            return result;
         }
         public IEnumerable<Order> GetOrders(string search = null)
         {

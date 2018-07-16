@@ -15,7 +15,6 @@ namespace PizzaStore.Library
         public int Sausage { get; set; }
         public int Chicken { get; set; }
         public int Bacon { get; set; }
-        public int Beef { get; set; }
         public int Olives { get; set; }
         public int Onions { get; set; }
         public int Cheese { get; set; }

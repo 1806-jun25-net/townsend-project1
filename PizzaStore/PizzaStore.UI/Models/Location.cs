@@ -8,7 +8,8 @@ namespace PizzaStore.UI.Models
     public class Location
     {
         public List<Order> History { get; set; } = new List<Order>();
-
+        
+        public int StoreID { get; set; }
         public int Pepperoni { get; set; }
         public int Sausage { get; set; }
         public int Chicken { get; set; }

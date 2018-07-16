@@ -10,9 +10,7 @@
     Search: <input type="search" name="search" />
     <button type="submit">Submit</button>
 </form>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -53,9 +51,7 @@
                     @Html.DisplayFor(modelItem => item.StoreLocation)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+                    @Html.ActionLink("Order History", "UserHistory", "Orders", new { id = item.UserID })
                 </td>
             </tr>
         }

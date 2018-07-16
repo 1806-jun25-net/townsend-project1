@@ -33,13 +33,13 @@ namespace PizzaStore.Library
             Sausage = location.Sausage,
             Chicken = location.Chicken,
             Bacon = location.Bacon,
-            Beef = location.Beef,
             Olives = location.Olives,
             Onions = location.Onions,
             Dough = location.Dough,
             MarinaraSauce = location.MarinaraSauce,
             BuffaloSauce = location.BuffaloSauce,
-            BBQSauce = location.Bbqsauce
+            BBQSauce = location.Bbqsauce,
+            Cheese = location.Cheese
 
         };
         public static Data.Locations Map(Location location) => new Data.Locations
@@ -49,13 +49,13 @@ namespace PizzaStore.Library
             Sausage = location.Sausage,
             Chicken = location.Chicken,
             Bacon = location.Bacon,
-            Beef = location.Beef,
             Olives = location.Olives,
             Onions = location.Onions,
             Dough = location.Dough,
             MarinaraSauce = location.MarinaraSauce,
             BuffaloSauce = location.BuffaloSauce,
-            Bbqsauce = location.BBQSauce
+            Bbqsauce = location.BBQSauce,
+            Cheese = location.Cheese
 
         };
 

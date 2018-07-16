@@ -5,4 +5,10 @@
 
 <h2>OrderPlaced</h2>
 
-<h2>@Html.DisplayFor(model => model.Bacon)</h2>
+@{ 
+    var order = Model;
+}
+
+<h2>Thank you for your order @order.FirstName</h2>
+<hr />
+<h3>Your order was placed @order.OrderTime and costed $@order.Price</h3>

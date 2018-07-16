@@ -10,7 +10,11 @@
 @model PizzaStore.UI.Models.OrderDisplay
 
 
-
+<style>
+    h5{
+        display: inline-block;
+    }
+</style>
 @using (Html.BeginForm("PlaceOrder", "Orders", FormMethod.Post))
 {
 
@@ -19,29 +23,33 @@
     @Html.HiddenFor(model => model.LastName)
     @Html.HiddenFor(model => model.UserID)
     @Html.HiddenFor(model => model.OrderPref)
-    @Html.HiddenFor(model => model.StoreLocation)
+    
+
+    <h3>Enter Store Location</h3>
+    @Html.TextBoxFor(model => model.StoreLocation, new { type = "number", min = "1", max = "4"})
+    <br />
     <h3>Choose Size</h3>
-    <h5>Large:</h5> @Html.RadioButtonFor(m => m.Size, "Large")
-    <h5>Medium:</h5> @Html.RadioButtonFor(m => m.Size, "Medium")
-    <h5>Small:</h5> @Html.RadioButtonFor(m => m.Size, "Small")
+    <h5>Large:</h5> @Html.RadioButtonFor(m => m.Size, "Large")<br />
+    <h5>Medium:</h5> @Html.RadioButtonFor(m => m.Size, "Medium")<br />
+    <h5>Small:</h5> @Html.RadioButtonFor(m => m.Size, "Small")<br />
 
     <h3>Choose Crust</h3>
-    <h5>Thin:</h5> @Html.RadioButtonFor(m => m.Crust, "Thin")
-    <h5>Pan:</h5> @Html.RadioButtonFor(m => m.Crust, "Pan")
-    <h5>Stuffed:</h5> @Html.RadioButtonFor(m => m.Crust, "Stuffed")
+    <h5>Thin:</h5> @Html.RadioButtonFor(m => m.Crust, "Thin")<br />
+    <h5>Pan:</h5> @Html.RadioButtonFor(m => m.Crust, "Pan")<br />
+    <h5>Stuffed:</h5> @Html.RadioButtonFor(m => m.Crust, "Stuffed")<br />
 
     <h3>Choose Sauce</h3>
-    <h5>Marinara:</h5> @Html.RadioButtonFor(m => m.Sauce, "Marinara")
-    <h5>Buffalo:</h5> @Html.RadioButtonFor(m => m.Sauce, "Buffalo")
-    <h5>BBQ:</h5> @Html.RadioButtonFor(m => m.Sauce, "BBQ")
+    <h5>Marinara:</h5> @Html.RadioButtonFor(m => m.Sauce, "Marinara")<br />
+    <h5>Buffalo:</h5> @Html.RadioButtonFor(m => m.Sauce, "Buffalo")<br />
+    <h5>BBQ:</h5> @Html.RadioButtonFor(m => m.Sauce, "BBQ")<br />
 
-    <h5>Toppings</h5>
-    <h3>Bacon: </h3> @Html.CheckBoxFor(m => m.Bacon)
-    <h3>Pepperoni: </h3>@Html.CheckBoxFor(m => m.Pepperoni)
-    <h3>Sausage: </h3>@Html.CheckBoxFor(m => m.Sausage)
-    <h3>Chicken: </h3>@Html.CheckBoxFor(m => m.Chicken)
-    <h3>Olives: </h3>@Html.CheckBoxFor(m => m.Olives)
-    <h3>Onions: </h3>@Html.CheckBoxFor(m => m.Onions)
+    <h3>Toppings</h3>
+    <h5>Bacon: </h5> @Html.CheckBoxFor(m => m.Bacon)
+    <h5>Pepperoni: </h5>@Html.CheckBoxFor(m => m.Pepperoni)
+    <h5>Sausage: </h5>@Html.CheckBoxFor(m => m.Sausage)
+    <h5>Chicken: </h5>@Html.CheckBoxFor(m => m.Chicken)
+    <h5>Olives: </h5>@Html.CheckBoxFor(m => m.Olives)
+    <h5>Onions: </h5>@Html.CheckBoxFor(m => m.Onions)
 
     <h3>How many: </h3>@Html.TextBoxFor(m => m.PizzaCount, new { type = "number", min = "1", max = "12" })
     <input type="submit" />

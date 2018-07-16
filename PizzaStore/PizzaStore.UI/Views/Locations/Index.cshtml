@@ -1,0 +1,95 @@
+﻿@model IEnumerable<PizzaStore.UI.Models.Location>
+
+
+<h2>Store Terminal</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pepperoni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bacon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chicken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sausage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Olives)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Onions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cheese)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dough)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BBQSauce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuffaloSauce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarinaraSauce)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pepperoni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bacon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chicken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sausage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Olives)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Onions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cheese)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dough)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BBQSauce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuffaloSauce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarinaraSauce)
+            </td>
+            <td>
+                @Html.ActionLink("Order History", "StoreHistory", "Orders", new { id = item.StoreID})
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>

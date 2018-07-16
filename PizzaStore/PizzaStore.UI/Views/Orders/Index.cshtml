@@ -6,13 +6,10 @@
 
 <h2>Index</h2>
 
-<form asp-action="Index" method="get">
-    Search: <input type="search" name="search" />
-    <button type="submit">Submit</button>
-</form>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<a asp-action="OrderPriceHigh">Order by most expensive.</a> <br />
+<a asp-action="OrderPriceLow">Order by cheapest.</a><br />
+<a asp-action="OldestPost">Order by oldest.</a><br />
+<a asp-action="NewestPost">Order by Newest.</a> <br />
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +17,7 @@
                 @Html.DisplayNameFor(model => model.OrderID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.User.UserID)
+                @Html.DisplayNameFor(model => model.UserID)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.StoreID)
@@ -41,7 +38,7 @@
                     @Html.DisplayFor(modelItem => item.OrderID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.User.UserID)
+                    @Html.DisplayFor(modelItem => item.UserID)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.StoreID)
@@ -52,11 +49,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.OrderID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderID })
-                </td>
+                
+                
             </tr>
         }
     </tbody>
