@@ -29,7 +29,7 @@
     @Html.TextBoxFor(model => model.StoreLocation, new { type = "number", min = "1", max = "4"})
     <br />
     <h3>Choose Size</h3>
-    <h5>Large:</h5> @Html.RadioButtonFor(m => m.Size, "Large", new { Checked = "checked" })<br />
+    <h5>Large:</h5> @Html.RadioButtonFor(m => m.Size,  "Large")<br /> 
     <h5>Medium:</h5> @Html.RadioButtonFor(m => m.Size, "Medium")<br />
     <h5>Small:</h5> @Html.RadioButtonFor(m => m.Size, "Small" )<br />
 
